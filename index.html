@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lakshman Damera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --ink: #1a1a1a;
+    --muted: #6b5f55;
+    --accent: #7a1f2b;
+    --rule: #d9d2c7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 'Inter', system-ui, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+  a:hover { background: var(--accent); color: var(--bg); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 32px 80px; }
+  nav.top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid var(--rule); padding-bottom: 16px;
+  }
+  nav.top .brand { font: 600 18px/1 'Fraunces', serif; letter-spacing: .02em; }
+  nav.top .links { display: flex; gap: 24px; font-size: 14px; }
+  nav.top .links a { color: var(--ink); border: none; }
+  nav.top .links a:hover { color: var(--accent); background: none; }
+  .hero { display: grid; grid-template-columns: 1fr 200px; gap: 48px; align-items: end; margin-top: 64px; }
+  .hero h1 { font: 700 64px/1 'Fraunces', serif; letter-spacing: -0.02em; margin: 0 0 16px; }
+  .hero .lead { font-size: 19px; color: var(--muted); margin: 0; max-width: 36ch; }
+  .hero img { width: 200px; height: 240px; object-fit: cover; filter: grayscale(20%); border: 1px solid var(--rule); }
+  section { margin-top: 72px; }
+  h2 {
+    font: 500 12px/1 'Inter', sans-serif; text-transform: uppercase; letter-spacing: .2em;
+    color: var(--muted); margin: 0 0 24px; padding-bottom: 12px; border-bottom: 1px solid var(--rule);
+  }
+  .proj { display: grid; grid-template-columns: 140px 1fr auto; gap: 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .proj-year { font: 500 14px 'Inter'; color: var(--muted); }
+  .proj-title { font: 600 22px/1.2 'Fraunces', serif; }
+  .proj-desc { color: var(--muted); margin-top: 4px; font-size: 15px; }
+  .proj-actions { display: flex; gap: 16px; font-size: 14px; }
+  .about p { max-width: 60ch; color: var(--muted); }
+  footer { margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px; }
+  @media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; gap: 24px; }
+    .hero img { width: 140px; height: 170px; }
+    .hero h1 { font-size: 44px; }
+    .proj { grid-template-columns: 1fr; gap: 4px; }
+    .proj-actions { margin-top: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <span class="brand">Lakshman Damera</span>
+    <span class="links">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="https://www.linkedin.com/in/kdamera1/">LinkedIn</a>
+      <a href="https://github.com/damerakd">GitHub</a>
+    </span>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>Lakshman<br>Damera.</h1>
+      <p class="lead">Engineer at Amazon (ex-AWS). I build small, useful things on the web.</p>
+    </div>
+    <img src="./lakshman.jpg" alt="">
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="proj">
+      <div class="proj-year">2026</div>
+      <div>
+        <div class="proj-title">Finance Tracker</div>
+        <div class="proj-desc">Personal finance SPA with receipt OCR via Gemini. React + Supabase.</div>
+      </div>
+      <div class="proj-actions">
+        <a href="https://finance.damera.dev/">Live</a>
+        <a href="https://github.com/damerakd/Finance-Tracker">Code</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>System Development Engineer at Amazon in Santa Monica, working across AWS Lambda, Redshift, and EKS. Before that, three-plus years at AWS Support helping customers run production workloads on the cloud.</p>
+    <p>M.S. Computer Science, Binghamton. B.Tech, KL University. Side projects in React and Postgres in spare time.</p>
+  </section>
+
+  <footer>© <span id="y"></span> Lakshman Damera</footer>
+</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
